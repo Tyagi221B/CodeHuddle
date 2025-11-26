@@ -1,11 +1,12 @@
+import Link from "next/link";
+import React from "react";
+
 import TagCard from "@/components/cards/TagCard";
 import { Preview } from "@/components/editor/Preview";
 import Metric from "@/components/Metric";
 import UserAvatar from "@/components/UserAvatar";
 import ROUTES from "@/constants/routes";
 import { formatNumber, getTimeStamp } from "@/lib/utils";
-import Link from "next/link";
-import React from "react";
 
 const sampleQuestion = {
   id: "q123",
@@ -88,8 +89,7 @@ Looking forward to your suggestions and examples!
   },
 };
 
-const QuestionDetails = async ({ params }: RouteParams) => {
-  const { id } = await params;
+const QuestionDetails = async () => {
 
   const { author, createdAt, answers, views, tags, content } = sampleQuestion;
 
